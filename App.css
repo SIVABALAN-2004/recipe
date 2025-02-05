@@ -1,0 +1,135 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #2F3C52; /* Dark slate blue background */
+  color: #E1E4E8; /* Off-white text color */
+  height: 100vh;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #F4A300; /* Soft mustard yellow */
+  color: #E1E4E8; /* Off-white text */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 20px;
+}
+
+.sidebar li a {
+  color: #E1E4E8;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar li a:hover {
+  background-color: #F15A29; /* Muted coral orange hover */
+  color: rgb(179, 152, 152);
+}
+
+/* Logo or Header */
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #F15A29; /* Muted coral orange for logo */
+}
+
+/* Main Content Area */
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #3A4C60; /* Dark grayish-blue background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-left: 30px;
+  transition: all 0.3s ease;
+}
+
+.main-content h2 {
+  font-size: 30px;
+  color: #F4A300; /* Bright mustard yellow headings */
+  margin-bottom: 20px;
+}
+
+.main-content button {
+  background-color: #F15A29; /* Muted coral orange buttons */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main-content button:hover {
+  background-color: #006F73; /* Deep teal on hover */
+}
+
+/* Form and Input Fields Styling */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #444444; /* Dark gray border */
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: #3A4C60; /* Dark background for inputs */
+  color: #E1E4E8; /* Off-white text for inputs */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #F4A300; /* Mustard yellow border on focus */
+  outline: none;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
